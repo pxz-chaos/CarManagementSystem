@@ -1,0 +1,33 @@
+stage: fast_success
+image_path: D:\CarFleetSystem_OCR_Cache\CarFleetSystem_V2\uploads\finish_35b8cdea1e6c4887bc89cea9f6ed2e14_jpg.jpg
+ocr_fast_mode: True
+ocr_fallback_enabled: True
+ocr_early_stop: True
+ocr_use_angle_cls: False
+ocr_max_roi_images: 5
+ocr_min_auto_mileage: 1000
+ocr_home: D:\CarFleetSystem_OCR_Cache
+ocr_home_is_ascii: True
+model_files_found: True
+
+warnings:
+- 无
+
+tokens:
+1. text='29%' | conf=0.9961 | source=yellow_plate
+2. text='贵ADL6725' | conf=0.9996 | source=yellow_plate
+3. text='本次行驶' | conf=0.9994 | source=mileage_precise
+4. text='00:5681' | conf=0.9811 | source=mileage_precise
+5. text='20.1' | conf=0.9980 | source=mileage_precise
+6. text='h' | conf=0.9873 | source=mileage_precise
+7. text='km' | conf=0.9570 | source=mileage_precise
+8. text='kwh/100km' | conf=0.9401 | source=mileage_precise
+9. text='累计行驶（长按OK键复位）' | conf=0.9785 | source=mileage_precise
+10. text='4612' | conf=0.9939 | source=mileage_precise
+11. text='19.7' | conf=0.9986 | source=mileage_precise
+12. text='kWh/100km' | conf=0.8955 | source=mileage_precise
+13. text='总里程：53351km' | conf=0.9882 | source=mileage_precise
+14. text='NORMAL' | conf=0.9921 | source=mileage_precise
+
+raw_text:
+29% | 贵ADL6725 | 本次行驶 | 00:5681 | 20.1 | h | km | kwh/100km | 累计行驶（长按OK键复位） | 4612 | 19.7 | kWh/100km | 总里程：53351km | NORMAL
