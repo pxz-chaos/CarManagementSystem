@@ -31,7 +31,11 @@ echo [4/9] Remove conflicting packages if any...
 venv\Scripts\python.exe -m pip uninstall -y paddleocr paddlex modelscope torch torchvision torchaudio paddlepaddle opencv-python opencv-contrib-python opencv-python-headless numpy Pillow pillow
 
 echo [5/9] Install NumPy 1.x first. Do NOT use NumPy 2.x with PaddleOCR 2.7.3...
+<<<<<<< HEAD
 venv\Scripts\python.exe -m pip install --no-cache-dir numpy==1.26.4 Pillow==10.4.0 protobuf==3.20.2 --timeout 120 --retries 10
+=======
+venv\Scripts\python.exe -m pip install --no-cache-dir numpy==1.26.4 Pillow==10.4.0 --timeout 120 --retries 10
+>>>>>>> 55a777a7d7dc7a1e307a6131d3c93efa554ea949
 if errorlevel 1 goto fail
 
 echo [6/9] Install OpenCV contrib without changing NumPy...
@@ -46,11 +50,15 @@ echo [8/9] Install PaddleOCR packages...
 venv\Scripts\python.exe -m pip install --no-cache-dir paddlepaddle==2.6.2 paddleocr==2.7.3 --timeout 180 --retries 10
 if errorlevel 1 goto fail
 
+<<<<<<< HEAD
 echo [9/9] Repair Paddle mandatory dependencies...
 venv\Scripts\python.exe -m pip install --no-cache-dir --force-reinstall protobuf==3.20.2 --timeout 120 --retries 10
 if errorlevel 1 goto fail
 
 echo [10/10] Final ABI lock: force NumPy 1.26.4 and single OpenCV package...
+=======
+echo [9/9] Final ABI lock: force NumPy 1.26.4 and single OpenCV package...
+>>>>>>> 55a777a7d7dc7a1e307a6131d3c93efa554ea949
 venv\Scripts\python.exe -m pip uninstall -y opencv-python opencv-python-headless
 venv\Scripts\python.exe -m pip install --no-cache-dir --force-reinstall --no-deps numpy==1.26.4 opencv-contrib-python==4.6.0.66 --timeout 120 --retries 10
 if errorlevel 1 goto fail

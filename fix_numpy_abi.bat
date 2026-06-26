@@ -38,11 +38,15 @@ echo [3/4] Install OpenCV contrib 4.6.0.66 without changing NumPy...
 venv\Scripts\python.exe -m pip install --no-cache-dir --force-reinstall --no-deps opencv-contrib-python==4.6.0.66 --timeout 120 --retries 10
 if errorlevel 1 goto fail
 
+<<<<<<< HEAD
 echo [4/5] Repair Paddle google/protobuf dependency...
 venv\Scripts\python.exe -m pip install --no-cache-dir --force-reinstall protobuf==3.20.2 --timeout 120 --retries 10
 if errorlevel 1 goto fail
 
 echo [5/5] Verify imports...
+=======
+echo [4/4] Verify imports...
+>>>>>>> 55a777a7d7dc7a1e307a6131d3c93efa554ea949
 venv\Scripts\python.exe check_numpy_abi.py
 if errorlevel 1 goto fail
 venv\Scripts\python.exe warmup_ocr.py

@@ -50,6 +50,7 @@ SMS_PROVIDER=console
 - OCR/短信调试：`debug_ocr/`
 
 上线后请定期备份 `database/vehicle.db` 和 `uploads/`。
+<<<<<<< HEAD
 
 ## Windows 常见修复
 
@@ -60,3 +61,5 @@ fix_paddle_google.bat
 ```
 
 或重新执行 `setup_env.bat`。
+=======
+>>>>>>> 55a777a7d7dc7a1e307a6131d3c93efa554ea949
